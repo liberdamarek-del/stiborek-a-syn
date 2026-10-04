@@ -1,0 +1,5 @@
+# Řeznictví Stiborek a syn
+User-agent: *
+Allow: /
+
+Sitemap: https://www.reznictvistiborek.cz/sitemap.xml
