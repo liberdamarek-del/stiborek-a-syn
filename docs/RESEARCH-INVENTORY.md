@@ -48,7 +48,7 @@ Průzkum proveden **4. 10. 2026**. Každý údaj je zařazen do jedné z kategor
 | Ve firmě pracuje 3. generace rodiny | rodina majitele | 2026-10-29 | OWNER-PROVIDED | ANO (O nás) |
 | Vlastní výroba podle původních rodinných receptur | rodina majitele; shodně katalog frenstat.infoshopping.cz | 2026-10-29 | OWNER-PROVIDED | ANO |
 | Výrobky: klobásky, debrecínky, salám (oblíbený u zákazníků), tlačenka, jitrnice, jelita, sekaná, uzené maso z udírny | rodina majitele | 2026-10-29 | OWNER-PROVIDED | ANO (Sortiment) |
-| Rozvoz zdarma každý pátek – Frenštát p. R. a Kopřivnice, min. objednávka 600 Kč, platba jen v hotovosti | rodina majitele | 2026-10-29 | OWNER-PROVIDED (způsob objednání a uzávěrka nepotvrzeny) | ANO (Rozvoz) |
+| Rozvoz zdarma každý pátek 12:00–15:00 (objednávky do čtvrtka) – Frenštát p. R. a Kopřivnice, min. objednávka 600 Kč, platba jen v hotovosti | rodina majitele | 2026-10-29 | OWNER-PROVIDED (způsob objednání nepotvrzen) | ANO (Rozvoz) |
 | Počet zaměstnanců 26–100, obrat 3–5 mil. | edb.cz / snippet | — | UNVERIFIED (vzájemně nekonzistentní) | NE |
 | Datová schránka | p9qn8ei | Firmy.cz | 2026-10-04 | VERIFIED u zdroje (neověřeno v ISDS) | NE |
 | Hodnocení zákazníků | 1 hodnocení na Firmy.cz (9. 9. 2026: „Skvělá uzenina, ochotná obsluha.“) | Firmy.cz | 2026-10-04 | VERIFIED | NE (jedna recenze není reprezentativní) |

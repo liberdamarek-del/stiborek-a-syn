@@ -163,12 +163,13 @@
 
   "delivery": {
     "_napoveda": "Rozvoz zboží. Prázdný title = sekce se na webu nezobrazí. Podmínky (terms) jsou dvojice popisek–hodnota.",
-    "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026. Objednávání po telefonu a uzávěrka objednávek zatím nepotvrzeny.",
+    "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026 (objednávky do čtvrtka, rozvoz v pátek 12:00–15:00). Objednávání po telefonu zatím nepotvrzeno.",
     "title": "Rozvoz zdarma",
     "lead": "Každý pátek vám zboží přivezeme",
-    "text": "Po Frenštátu pod Radhoštěm a Kopřivnici vozíme zboží zdarma.",
+    "text": "Objednejte do čtvrtka a v pátek mezi 12:00 a 15:00 vám zboží zdarma přivezeme po Frenštátu pod Radhoštěm a Kopřivnici.",
     "terms": [
-      { "label": "Kdy", "value": "každý pátek" },
+      { "label": "Objednávky", "value": "do čtvrtka" },
+      { "label": "Rozvoz", "value": "pátek 12:00–15:00" },
       { "label": "Kam", "value": "Frenštát pod Radhoštěm a Kopřivnice" },
       { "label": "Minimální objednávka", "value": "600 Kč" },
       { "label": "Platba", "value": "pouze v hotovosti" }
