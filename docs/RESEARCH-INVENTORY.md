@@ -41,11 +41,13 @@ Průzkum proveden **4. 10. 2026**. Každý údaj je zařazen do jedné z kategor
 | „bez konzervantů“ | tvrzení ze starého popisu na Firmy.cz | snippet vyhledávače | ≤ 2022 | HISTORICAL / UNVERIFIED | NE |
 | „z vlastní porážky“, „vlastní výroba“ | tvrzení ze starého popisu | snippet vyhledávače | ≤ 2022 | HISTORICAL / UNVERIFIED | NE |
 | „rodinné receptury … přes 60 let“ | tvrzení ze starého webu | snippet vyhledávače | ≤ 2022 | HISTORICAL / UNVERIFIED | NE |
-| Založení 1993 | edb.cz (obsah nedostupný – HTTP 403), shrnutí vyhledávače | — | UNVERIFIED | NE |
+| Založení 1993 | rodina majitele („od začátků samostatného českého státu“); shoduje se se shrnutím vyhledávače k edb.cz (obsah nedostupný) | 2026-10-29 | OWNER-PROVIDED | ANO (O nás) |
+| Dříve na místě prodejna Pramen | rodina majitele | 2026-10-29 | OWNER-PROVIDED | ANO (O nás) |
 | 2. místo v 18. ročníku soutěže o nejlepší klobásku, Masopust ve Valašském muzeu v přírodě, Rožnov p. R., 7. 2. 2015 | Valašský deník, 11. 2. 2015: https://valassky.denik.cz/zpravy-region/nejlepsi-klobasu-dela-milan-zabcik-z-katerinic-tlacenku-zase-reznici-z-tesina-30/ | 2026-10-29 | VERIFIED | ANO (O nás) |
-| Opakovaná účast na Masopustu v Rožnově, další ocenění klobás | rodina majitele (29. 10. 2026); jiné ročníky se online dohledat nepodařilo (Deník, výroční zprávy NMVP 2013, 2017–2019) | 2026-10-29 | OWNER-PROVIDED (účast); další umístění UNVERIFIED | účast ANO, další umístění NE |
+| Opakovaná účast na Masopustu v Rožnově, další ocenění klobás | rodina majitele (29. 10. 2026); jiné ročníky se online dohledat nepodařilo – výsledky 2011 (Novinky.cz) a 2017 (TV Beskyd) Stiborka neuvádějí, u 2020, 2023, 2024 výsledky v článcích nejsou; výroční zprávy NMVP 2013, 2017–2019 výsledky neuvádějí | 2026-10-29 | OWNER-PROVIDED (účast); další umístění UNVERIFIED | účast ANO, další umístění NE |
 | Ve firmě pracuje 3. generace rodiny | rodina majitele | 2026-10-29 | OWNER-PROVIDED | ANO (O nás) |
-| „podle původní rodinné receptury“, výroba na místě | katalog frenstat.infoshopping.cz (datum textu neznámé) | 2026-10-29 | HISTORICAL / UNVERIFIED | NE (čeká na potvrzení) |
+| Vlastní výroba podle původních rodinných receptur | rodina majitele; shodně katalog frenstat.infoshopping.cz | 2026-10-29 | OWNER-PROVIDED | ANO |
+| Výrobky: klobásky, debrecínky, tlačenka, jitrnice, jelita, sekaná, uzené maso z udírny | rodina majitele | 2026-10-29 | OWNER-PROVIDED | ANO (Sortiment) |
 | Počet zaměstnanců 26–100, obrat 3–5 mil. | edb.cz / snippet | — | UNVERIFIED (vzájemně nekonzistentní) | NE |
 | Datová schránka | p9qn8ei | Firmy.cz | 2026-10-04 | VERIFIED u zdroje (neověřeno v ISDS) | NE |
 | Hodnocení zákazníků | 1 hodnocení na Firmy.cz (9. 9. 2026: „Skvělá uzenina, ochotná obsluha.“) | Firmy.cz | 2026-10-04 | VERIFIED | NE (jedna recenze není reprezentativní) |

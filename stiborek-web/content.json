@@ -67,7 +67,7 @@
     "eyebrow": "Řeznictví a uzenářství · Frenštát pod Radhoštěm",
     "title": "Řeznictví Stiborek a syn",
     "titleHighlight": "Stiborek a syn",
-    "subtitle": "Maso, uzeniny a masné výrobky. Najdete nás na ulici Horní ve Frenštátě pod Radhoštěm.",
+    "subtitle": "Maso, uzeniny a masné výrobky podle původních rodinných receptur. Najdete nás na ulici Horní ve Frenštátě pod Radhoštěm.",
     "primaryCta": { "label": "Prohlédnout sortiment", "href": "#sortiment" },
     "secondaryCta": { "label": "Jak se k nám dostat", "href": "#kde-nas-najdete" },
     "_image_napoveda": "Velká fotografie v úvodu. Zatím není k dispozici – doplňte např. { \"src\": \"images/hero/prodejna.jpg\", \"alt\": \"Popis fotografie\", \"width\": 1920, \"height\": 1280 }. Bez fotografie se zobrazí logo.",
@@ -77,7 +77,7 @@
   "intro": {
     "title": "Vítejte v řeznictví Stiborek a syn",
     "text": [
-      "Zabýváme se maloobchodním prodejem masa a masných výrobků.",
+      "Vyrábíme a prodáváme maso, uzeniny a masné výrobky – všechno podle původních rodinných receptur.",
       "Prodejnu najdete na ulici Horní 210 ve Frenštátě pod Radhoštěm. Zastavte se, nebo nám zavolejte – rádi vám poradíme."
     ]
   },
@@ -85,7 +85,7 @@
   "products": {
     "title": "Sortiment",
     "lead": "Co u nás koupíte",
-    "note": "Nabídka zboží se může měnit. Na aktuální nabídku se zeptejte přímo v prodejně nebo po telefonu.",
+    "note": "Uzeniny a masné výrobky vyrábíme sami podle původních rodinných receptur. Nabídka se může měnit – na aktuální zboží se zeptejte v prodejně nebo po telefonu.",
     "_napoveda": "show: true = položka se zobrazí, show: false = položka je skrytá. Fotografie je nepovinná.",
     "items": [
       {
@@ -96,18 +96,32 @@
         "_stav": "VERIFIED – Firmy.cz: maloobchodní prodej masa"
       },
       {
-        "name": "Uzeniny a uzené maso",
-        "description": "Výběr uzenin a uzeného masa podle aktuální nabídky v prodejně.",
+        "name": "Klobásky a debrecínky",
+        "description": "Podle původní rodinné receptury. S klobáskami jsme soutěžili i na Masopustu ve Valašském muzeu v přírodě.",
         "image": null,
         "show": true,
-        "_stav": "VERIFIED – obor Řeznictví a uzenářství (rejstřík, logo, Firmy.cz)"
+        "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
       },
       {
-        "name": "Masné výrobky",
-        "description": "Další masné výrobky podle aktuální nabídky. Zeptejte se, co je zrovna k dispozici.",
+        "name": "Uzené maso z udírny",
+        "description": "Udíme sami, podle rodinné receptury.",
         "image": null,
         "show": true,
-        "_stav": "VERIFIED – Firmy.cz: prodej masných výrobků"
+        "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
+      },
+      {
+        "name": "Tlačenka, jitrnice a jelita",
+        "description": "Zabijačkové speciality z naší výroby.",
+        "image": null,
+        "show": true,
+        "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
+      },
+      {
+        "name": "Sekaná",
+        "description": "Z naší výroby, podle rodinné receptury.",
+        "image": null,
+        "show": true,
+        "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
       },
       {
         "name": "Frenštátská uzená slanina",
@@ -145,12 +159,13 @@
     "lead": "Rodinné řeznictví a uzenářství ve Frenštátě pod Radhoštěm",
     "text": [
       "Řeznictví Stiborek a syn najdete ve Frenštátě pod Radhoštěm na ulici Horní 210.",
-      "Ve znaku máme „řeznictví a uzenářství“ – a tomu se věnujeme: prodeji masa, uzenin a masných výrobků."
+      "Řeznictví funguje od roku 1993 – od samých začátků samostatné České republiky. Dříve tu bývala prodejna Pramen."
     ],
     "_story_napoveda": "Příběh firmy – každý odstavec v uvozovkách, oddělené čárkou. Prázdné = nezobrazí se. Uvádějte jen ověřitelné údaje.",
-    "_story_stav": "3. generace a účast na Masopustu: OWNER-PROVIDED (rodina majitele, 29. 10. 2026). 2. místo v 18. ročníku soutěže o nejlepší klobásku, Masopust ve Valašském muzeu v přírodě 7. 2. 2015: VERIFIED (Valašský deník, 11. 2. 2015). Další umístění doplnit po potvrzení roku a pořadí.",
+    "_story_stav": "Rok 1993, prodejna Pramen, 3. generace, rodinné receptury, výrobky a účast na Masopustu: OWNER-PROVIDED – rodina majitele, 29. 10. 2026. 2. místo v 18. ročníku soutěže o nejlepší klobásku (Masopust ve Valašském muzeu v přírodě, 7. 2. 2015): VERIFIED – Valašský deník, 11. 2. 2015. Jiná umístění se online nepodařilo dohledat (výsledky 2011 a 2017 Stiborka neuvádějí, u ostatních ročníků výsledky online nejsou). Doplnit po potvrzení roku a pořadí (diplom).",
     "story": [
-      "Jsme rodinná firma – v řeznictví dnes pracuje už třetí generace rodiny Stiborků.",
+      "Jsme rodinná firma – dnes v řeznictví pracuje už třetí generace rodiny Stiborků.",
+      "Klobásky, debrecínky, tlačenku, jitrnice, jelita, sekanou i uzené maso z naší udírny děláme podle původních rodinných receptur.",
       "Několikrát jsme se zúčastnili tradičního Masopustu ve Valašském muzeu v přírodě v Rožnově pod Radhoštěm a soutěže řezníků o nejlepší klobásku. V jejím 18. ročníku v roce 2015 skončila naše klobáska na 2. místě."
     ],
     "image": null
