@@ -411,7 +411,7 @@ const regions = {
       <p class="eyebrow">${ICON.truck}${esc(d.title)}</p>
       <h2 id="rozvoz-title" class="card__title">${esc(d.lead || d.title)}</h2>
       ${d.text ? `<p class="delivery__text">${esc(d.text)}</p>` : ''}
-      ${d.cta ? `<a class="btn btn--primary" href="${telHref(c.company.phone)}">${ICON.phone}${esc(d.cta)}</a>` : ''}
+      ${d.cta ? `<a class="btn btn--primary delivery__call" href="${telHref(c.company.phone)}">${ICON.phone}${esc(d.cta)}</a>` : ''}
     </div>
     ${terms ? `<dl class="delivery__terms">${terms}</dl>` : ''}
   </article>

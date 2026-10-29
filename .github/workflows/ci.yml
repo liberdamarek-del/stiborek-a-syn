@@ -26,4 +26,12 @@ jobs:
       - name: Vygenerované soubory odpovídají content.json
         run: node tools/build.mjs --check
       - name: Automatické testy
-        run: npm test
+        run: |
+          set -o pipefail
+          npm test 2>&1 | tee test-vystup.log
+      - name: Selhané testy jako poznámka v přehledu běhu
+        if: failure()
+        run: |
+          [ -f test-vystup.log ] || exit 0
+          zprava=$(grep -A3 '✖' test-vystup.log | head -60 | awk 'BEGIN{ORS="%0A"} {print}')
+          echo "::error title=Selhané testy::${zprava}"

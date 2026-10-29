@@ -52,8 +52,8 @@ const htmlvalidate = new HtmlValidate({
     'void-style': 'off',
     'long-title': 'off',
     'no-redundant-role': 'error',
-    // „Zeptat se po telefonu“ je text odkazu, ne telefonní číslo
-    'tel-non-breaking': ['error', { ignoreClasses: ['link-arrow'] }],
+    // „Zeptat se po telefonu“ a „Domluvit rozvoz po telefonu“ jsou texty odkazů, ne telefonní čísla
+    'tel-non-breaking': ['error', { ignoreClasses: ['link-arrow', 'delivery__call'] }],
   },
 });
 for (const f of ['index.html', '404.html']) {
