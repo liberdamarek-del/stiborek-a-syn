@@ -9,17 +9,47 @@
  * Použití:
  *   node tools/build.mjs           – sestaví web
  *   node tools/build.mjs --check   – jen ověří, že vygenerované soubory odpovídají content.json (CI)
+ *   node tools/build.mjs --out _site --site-url https://uzivatel.github.io/repozitar/
+ *                                  – samostatná kopie webu pro hosting na jiné adrese (např. GitHub Pages);
+ *                                    složka stiborek-web/ zůstane beze změny. Kopie neobsahuje interní soubory
+ *                                    (README, _headers, .htaccess, security/) a protože hosting jako GitHub Pages
+ *                                    neumí vlastní hlavičky, dostane CSP a Referrer-Policy jako <meta> značky.
  *
  * Nevyžaduje žádné balíčky (stačí Node.js 20+).
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync, cpSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { dirname, join } from 'node:path';
+import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const WEB = join(ROOT, 'stiborek-web');
 const CHECK = process.argv.includes('--check');
+
+function fail(msg) {
+  console.error(`\n✖ ${msg}\n`);
+  process.exit(1);
+}
+function argValue(name) {
+  const i = process.argv.indexOf(name);
+  if (i === -1) return null;
+  const v = process.argv[i + 1];
+  if (!v || v.startsWith('--')) fail(`Za ${name} chybí hodnota.`);
+  return v;
+}
+const OUT = argValue('--out');
+const SITE_URL = argValue('--site-url');
+if (OUT && CHECK) fail('--out nelze kombinovat s --check.');
+if (SITE_URL && !OUT) fail('--site-url se používá jen spolu s --out (adresa webu ve stiborek-web/ se nastavuje v content.json).');
+if (SITE_URL && !/^https:\/\/[^/\s?#]+\/(?:[^\s?#]*\/)?$/.test(SITE_URL)) {
+  fail('--site-url musí být adresa ve tvaru https://domena/ nebo https://domena/slozka/ (s lomítkem na konci).');
+}
+const DEST = OUT ? resolve(OUT) : WEB;
+if (OUT) {
+  const inside = (a, b) => a === b || a.startsWith(b + sep);
+  if (inside(DEST, WEB) || inside(WEB, DEST) || inside(ROOT, DEST)) fail(`--out ${OUT}: nelze zapisovat do složky webu ani nad ni.`);
+  if (existsSync(DEST) && readdirSync(DEST).length) fail(`--out ${OUT}: složka není prázdná. Smažte ji, nebo zvolte jinou.`);
+}
 
 const site = await import(pathToFileURL(join(WEB, 'script.js')).href);
 const { esc, renderRegion, jsonLd, contentHash, parseHours, absolutize } = site;
@@ -108,9 +138,12 @@ if (errors.length) {
 
 /* ---------- Generování ---------- */
 
+if (SITE_URL) c.site.url = SITE_URL;
+
 const now = new Date();
 const hash = contentHash(raw);
 const base = c.site.url;
+const basePath = new URL(base).pathname; // „/“ na vlastní doméně, „/repozitar/“ na GitHub Pages
 const abs = (p) => new URL(p, base).href;
 const fileHash = (f) => createHash('sha256').update(readFileSync(join(WEB, f))).digest('hex').slice(0, 10);
 const versions = { 'styles.css': fileHash('styles.css'), 'script.js': fileHash('script.js') };
@@ -199,9 +232,49 @@ Sitemap: ${abs('sitemap.xml')}
   }, null, 2) + '\n',
 };
 
+/* ---------- Kopie pro hosting na jiné adrese (--out) ---------- */
+
+/** Soubory, které na veřejný web nepatří (návod, konfigurace serverů, skryté soubory). */
+const INTERNAL = (rel) => {
+  const parts = rel.split(sep);
+  return parts.some((p) => p.startsWith('.')) || ['README.md', '_headers', 'security'].includes(parts[0]);
+};
+
+/** Cesty od kořene („/styles.css“) → od složky webu („/repozitar/styles.css“). Externí adresy („//“, „https:“) se nemění. */
+function rebase(html, prefix) {
+  if (prefix === '/') return html;
+  const fix = (u) => (/^\/(?!\/)/.test(u) ? prefix + u.slice(1) : u);
+  return html
+    .replace(/(\s(?:src|href)=")([^"]*)"/gi, (m, a, u) => `${a}${fix(u)}"`)
+    .replace(/(\ssrcset=")([^"]*)"/gi, (m, a, list) => `${a}${list.split(',').map((s) => s.trim()).map(fix).join(', ')}"`);
+}
+
+/** Hlavičky, které hosting bez vlastních hlaviček (GitHub Pages) nepošle, vložené jako <meta>. */
+function securityMeta() {
+  const headers = readFileSync(join(WEB, '_headers'), 'utf8');
+  const csp = (headers.match(/^\s*Content-Security-Policy:\s*(.+)$/m) || [])[1];
+  const referrer = (headers.match(/^\s*Referrer-Policy:\s*(.+)$/m) || [])[1];
+  if (!csp || !referrer) fail('V stiborek-web/_headers chybí Content-Security-Policy nebo Referrer-Policy.');
+  // frame-ancestors (a report-*/sandbox) v <meta> prohlížeče ignorují – vynecháno, ať nehlásí chybu do konzole.
+  const metaCsp = csp.split(';').map((d) => d.trim()).filter((d) => d && !/^(frame-ancestors|report-uri|report-to|sandbox)\b/.test(d)).join('; ');
+  return `<meta http-equiv="Content-Security-Policy" content="${esc(metaCsp)}">\n<meta name="referrer" content="${esc(referrer.trim())}">`;
+}
+
+if (OUT) {
+  mkdirSync(DEST, { recursive: true });
+  cpSync(WEB, DEST, { recursive: true, filter: (src) => src === WEB || !INTERNAL(relative(WEB, src)) });
+  const meta = securityMeta();
+  for (const file of ['index.html', '404.html']) {
+    const withMeta = outputs[file].replace(/(<meta charset="utf-8">\n)/i, `$1${meta}\n`);
+    if (withMeta === outputs[file]) fail(`${file}: nenalezena značka <meta charset="utf-8"> pro vložení CSP.`);
+    outputs[file] = withMeta;
+  }
+  outputs['404.html'] = rebase(outputs['404.html'], basePath);
+}
+
 let changed = [];
 for (const [file, out] of Object.entries(outputs)) {
-  const path = join(WEB, file);
+  const path = join(DEST, file);
   const before = existsSync(path) ? readFileSync(path, 'utf8') : '';
   if (before !== out) {
     changed.push(file);
@@ -217,6 +290,8 @@ if (CHECK) {
     process.exit(1);
   }
   console.log('\n✔ Vygenerované soubory odpovídají content.json.');
+} else if (OUT) {
+  console.log(`\n✔ Kopie webu pro ${base} je ve složce ${DEST}  (obsah ${hash}, css ${versions['styles.css']}, js ${versions['script.js']})`);
 } else {
   console.log(`\n✔ Hotovo. ${changed.length ? 'Aktualizováno: ' + changed.join(', ') : 'Beze změn.'}  (obsah ${hash}, css ${versions['styles.css']}, js ${versions['script.js']})`);
 }

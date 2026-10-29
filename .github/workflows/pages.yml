@@ -1,0 +1,55 @@
+name: Web – zveřejnění na GitHub Pages
+
+# Každá změna ve výchozí větvi (i úprava content.json přímo na GitHubu)
+# web znovu sestaví, zkontroluje v prohlížeči a zveřejní.
+# Jednorázově je potřeba: Settings → Pages → Source: GitHub Actions.
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - id: pages
+        uses: actions/configure-pages@v6
+      - name: Sestavení webu pro adresu GitHub Pages
+        run: node tools/build.mjs --out _site --site-url "${{ steps.pages.outputs.base_url }}/"
+      - name: Kontrola v prohlížeči (mobil, stránka 404, CSP, odkazy)
+        run: |
+          pip install playwright==1.63.0
+          python -m playwright install --with-deps chromium
+          python tools/test-pages.py _site "${{ steps.pages.outputs.base_url }}/"
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
