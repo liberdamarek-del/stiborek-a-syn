@@ -569,7 +569,9 @@ html:not(.js) .status { display: none; }
   display: grid;
   place-items: center;
   min-width: 0;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 5 / 4;
+  /* velikost loga se odvozuje od šířky rámečku (cqi), aby se vešlo na každý displej */
+  container-type: inline-size;
   border-radius: var(--radius-lg);
   overflow: hidden;
   isolation: isolate;
@@ -589,7 +591,9 @@ html:not(.js) .status { display: none; }
   pointer-events: none;
 }
 .hero__badge {
-  width: clamp(8.5rem, 34vw, 15rem);
+  /* logo má poměr 309 : 480 – při 36 % šířky zabere asi 70 % výšky rámečku 5 : 4 */
+  width: clamp(7rem, 30vw, 13rem);
+  width: min(15rem, 36cqi);
   filter: drop-shadow(0 22px 28px rgba(40, 0, 0, 0.45));
 }
 .hero__badge img { width: 100%; }
@@ -613,20 +617,10 @@ html:not(.js) .status { display: none; }
 
 @media (prefers-reduced-motion: no-preference) {
   .hero__badge { animation: badge-in 1s var(--ease) both; }
-  @supports (animation-timeline: scroll()) {
-    .hero__badge img {
-      animation: badge-float linear both;
-      animation-timeline: scroll(root);
-      animation-range: 0 90vh;
-    }
-  }
 }
 @keyframes badge-in {
   from { opacity: 0; transform: scale(0.9) rotate(-6deg); }
   to { opacity: 1; transform: none; }
-}
-@keyframes badge-float {
-  to { transform: translateY(-2.5rem) rotate(-4deg); }
 }
 
 /* Rychlé informace */
@@ -681,7 +675,10 @@ a.quick__value:hover { color: var(--red-ink); text-decoration-color: currentColo
     column-gap: clamp(2rem, 5vw, 5rem);
   }
   .hero__visual { aspect-ratio: 4 / 4.6; }
-  .hero__badge { width: clamp(11rem, 20vw, 18.5rem); }
+  .hero__badge {
+    width: clamp(11rem, 20vw, 18.5rem);
+    width: min(18.5rem, 56cqi);
+  }
   .quick {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

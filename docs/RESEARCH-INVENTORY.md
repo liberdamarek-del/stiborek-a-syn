@@ -25,7 +25,7 @@ Průzkum proveden **4. 10. 2026**. Každý údaj je zařazen do jedné z kategor
 | Jednatel | Tomáš Stiborek | ARES – veřejný rejstřík | 2026-10-04 | VERIFIED | NE (není potřeba; osobní údaje se nepublikují) |
 | Telefon | +420 556 836 210 | Firmy.cz (aktuální), infoshopping.cz, starý web (snippet) | 2026-10-04 | VERIFIED (konzistentní ve všech zdrojích; nebylo možné ověřit voláním) | ANO |
 | E-mail | frenstat@reznictvistiborek.cz | starý web (snippet vyhledávače) | — | HISTORICAL – **nefunkční**: doména neexistuje (NXDOMAIN, CZ.NIC: „Doména nenalezena“) | NE |
-| Otevírací doba (aktuální zdroj) | Po–Pá 7:00–17:00, So 7:00–11:30, Ne zavřeno | Firmy.cz (záznam s novým IČO, recenze z 9/2026) | 2026-10-04 | VERIFIED u zdroje, ale **CONFLICTING** se starým webem | ANO, označeno `REQUIRES OWNER CONFIRMATION` |
+| Otevírací doba (aktuální zdroj) | Po–Pá 7:00–17:00, So 7:00–11:30, Ne zavřeno | Firmy.cz (záznam s novým IČO, recenze z 9/2026) | 2026-10-04 | VERIFIED u zdroje; **OWNER-PROVIDED** – potvrzeno rodinou majitele 29. 10. 2026 | ANO |
 | Otevírací doba (starý web) | Po–Pá 7:00–18:00, So 7:00–11:30 | snippety vyhledávače ze starého webu a katalogů | ≤ 2022 | HISTORICAL | NE |
 | Facebook | https://www.facebook.com/reznictvi/ (ID stránky 124860174940, název „Řeznictví Stiborek a syn“, 488 sledujících) | veřejný Facebook Page Plugin, odkaz z Firmy.cz | 2026-10-04 | VERIFIED | ANO |
 | Facebook (varianta) | facebook.com/reznictvi-stiborek | text na Firmy.cz | 2026-10-04 | CONFLICTING – URL vrací chybu 400 (neplatné uživatelské jméno) | NE |
@@ -42,7 +42,10 @@ Průzkum proveden **4. 10. 2026**. Každý údaj je zařazen do jedné z kategor
 | „z vlastní porážky“, „vlastní výroba“ | tvrzení ze starého popisu | snippet vyhledávače | ≤ 2022 | HISTORICAL / UNVERIFIED | NE |
 | „rodinné receptury … přes 60 let“ | tvrzení ze starého webu | snippet vyhledávače | ≤ 2022 | HISTORICAL / UNVERIFIED | NE |
 | Založení 1993 | edb.cz (obsah nedostupný – HTTP 403), shrnutí vyhledávače | — | UNVERIFIED | NE |
-| 2. místo v 18. ročníku soutěže (klobásy) | shrnutí vyhledávače k článku Valašského deníku (článek vrací HTTP 503, datum neznámé) | — | UNVERIFIED | NE |
+| 2. místo v 18. ročníku soutěže o nejlepší klobásku, Masopust ve Valašském muzeu v přírodě, Rožnov p. R., 7. 2. 2015 | Valašský deník, 11. 2. 2015: https://valassky.denik.cz/zpravy-region/nejlepsi-klobasu-dela-milan-zabcik-z-katerinic-tlacenku-zase-reznici-z-tesina-30/ | 2026-10-29 | VERIFIED | ANO (O nás) |
+| Opakovaná účast na Masopustu v Rožnově, další ocenění klobás | rodina majitele (29. 10. 2026); jiné ročníky se online dohledat nepodařilo (Deník, výroční zprávy NMVP 2013, 2017–2019) | 2026-10-29 | OWNER-PROVIDED (účast); další umístění UNVERIFIED | účast ANO, další umístění NE |
+| Ve firmě pracuje 3. generace rodiny | rodina majitele | 2026-10-29 | OWNER-PROVIDED | ANO (O nás) |
+| „podle původní rodinné receptury“, výroba na místě | katalog frenstat.infoshopping.cz (datum textu neznámé) | 2026-10-29 | HISTORICAL / UNVERIFIED | NE (čeká na potvrzení) |
 | Počet zaměstnanců 26–100, obrat 3–5 mil. | edb.cz / snippet | — | UNVERIFIED (vzájemně nekonzistentní) | NE |
 | Datová schránka | p9qn8ei | Firmy.cz | 2026-10-04 | VERIFIED u zdroje (neověřeno v ISDS) | NE |
 | Hodnocení zákazníků | 1 hodnocení na Firmy.cz (9. 9. 2026: „Skvělá uzenina, ochotná obsluha.“) | Firmy.cz | 2026-10-04 | VERIFIED | NE (jedna recenze není reprezentativní) |

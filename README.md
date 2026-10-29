@@ -15,7 +15,7 @@ Bez backendu, bez cookies a trackerů, obsah se upravuje v jediném souboru `con
 ## Před spuštěním (vyžaduje majitele)
 
 1. Zaregistrovat doménu – `reznictvistiborek.cz` je k 4. 10. 2026 **volná**.
-2. Potvrdit otevírací dobu (zdroje se liší: do 17:00 vs. do 18:00).
+2. ~~Potvrdit otevírací dobu~~ – potvrzeno 29. 10. 2026 (Po–Pá 7:00–17:00, So 7:00–11:30).
 3. Dodat fotografie (z Facebooku je nebylo možné bez přihlášení stáhnout).
 
 ## Zveřejnění na GitHub Pages

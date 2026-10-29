@@ -8,7 +8,7 @@
     "title": "Řeznictví Stiborek a syn – Frenštát pod Radhoštěm",
     "description": "Řeznictví a uzenářství Stiborek a syn na ulici Horní 210 ve Frenštátě pod Radhoštěm. Maso, uzeniny a masné výrobky. Otevírací doba, kontakt a cesta k nám.",
     "ogImage": "images/brand/og-image.jpg",
-    "lastUpdated": "2026-10-04"
+    "lastUpdated": "2026-10-29"
   },
 
   "company": {
@@ -44,7 +44,7 @@
 
   "openingHours": {
     "_napoveda": "Časy pište ve tvaru 07:00-17:00. Polední pauzu zapište takto: 07:00-12:00, 13:00-17:00. Zavřený den: zavřeno.",
-    "_stav": "REQUIRES OWNER CONFIRMATION – převzato z Firmy.cz (4. 10. 2026). Starý web uváděl Po–Pá 7:00–18:00. Prosím potvrďte aktuální časy.",
+    "_stav": "OWNER-PROVIDED – potvrzeno rodinou majitele 29. 10. 2026 (shoduje se s Firmy.cz).",
     "monday": "07:00-17:00",
     "tuesday": "07:00-17:00",
     "wednesday": "07:00-17:00",
@@ -142,13 +142,17 @@
 
   "about": {
     "title": "O nás",
-    "lead": "Řeznictví a uzenářství ve Frenštátě pod Radhoštěm",
+    "lead": "Rodinné řeznictví a uzenářství ve Frenštátě pod Radhoštěm",
     "text": [
       "Řeznictví Stiborek a syn najdete ve Frenštátě pod Radhoštěm na ulici Horní 210.",
       "Ve znaku máme „řeznictví a uzenářství“ – a tomu se věnujeme: prodeji masa, uzenin a masných výrobků."
     ],
-    "_story_napoveda": "Sem doplňte skutečný příběh firmy (od kdy funguje, kdo ji založil, co je pro vás důležité). Prázdné = nezobrazí se. Uvádějte jen ověřitelné údaje.",
-    "story": [],
+    "_story_napoveda": "Příběh firmy – každý odstavec v uvozovkách, oddělené čárkou. Prázdné = nezobrazí se. Uvádějte jen ověřitelné údaje.",
+    "_story_stav": "3. generace a účast na Masopustu: OWNER-PROVIDED (rodina majitele, 29. 10. 2026). 2. místo v 18. ročníku soutěže o nejlepší klobásku, Masopust ve Valašském muzeu v přírodě 7. 2. 2015: VERIFIED (Valašský deník, 11. 2. 2015). Další umístění doplnit po potvrzení roku a pořadí.",
+    "story": [
+      "Jsme rodinná firma – v řeznictví dnes pracuje už třetí generace rodiny Stiborků.",
+      "Několikrát jsme se zúčastnili tradičního Masopustu ve Valašském muzeu v přírodě v Rožnově pod Radhoštěm a soutěže řezníků o nejlepší klobásku. V jejím 18. ročníku v roce 2015 skončila naše klobáska na 2. místě."
+    ],
     "image": null
   },
 
