@@ -854,6 +854,47 @@ a.quick__value:hover { color: var(--red-ink); text-decoration-color: currentColo
   .gallery-empty { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
 }
 
+/* ---------- Rozvoz ---------- */
+
+.delivery { padding-top: 0; }
+.delivery:not(:has(.delivery__card)) { display: none; }
+.delivery .delivery__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  border-top: 4px solid var(--red);
+}
+.delivery__card .card__title { margin-bottom: 0.75rem; }
+.delivery__card .btn { white-space: normal; max-width: 100%; }
+.delivery__text {
+  color: var(--ink-2);
+  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+  max-width: 40ch;
+  margin: 0 0 1.5rem;
+}
+.delivery__terms { display: grid; margin: 0; }
+.delivery__term {
+  display: grid;
+  gap: 0.2rem;
+  padding-block: 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+.delivery__term:first-child { border-top: 1px solid var(--line); }
+.delivery__term dt {
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+.delivery__term dd { margin: 0; font-family: var(--font-display); font-size: 1.2rem; }
+@media (min-width: 30em) {
+  .delivery__term { grid-template-columns: minmax(7rem, 38%) minmax(0, 1fr); gap: 1rem; align-items: baseline; }
+}
+@media (min-width: 56em) {
+  .delivery .delivery__card { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+}
+
 /* ---------- Otevírací doba a adresa ---------- */
 
 .visit__grid { display: grid; gap: clamp(1rem, 3vw, 1.75rem); }

@@ -86,6 +86,7 @@ export const ICON = {
   mail: svg('<path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/>'),
   zoom: svg('<circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/>'),
   up: svg('<path d="M12 19V5M5 12l7-7 7 7"/>'),
+  truck: svg('<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>'),
 };
 
 /* ---------- Otevírací doba ---------- */
@@ -289,10 +290,13 @@ function statusSlot(extra = '', variant = '') {
   return `<span class="status is-pending${extra ? ' ' + extra : ''}" data-status${variant ? `="${variant}"` : ''}><span class="status__dot" aria-hidden="true"></span><span class="status__text">Otevírací doba</span></span>`;
 }
 
+const hasDelivery = (c) => Boolean(c.delivery && String(c.delivery.title || '').trim());
+
 function navItems(c) {
   const g = c.gallery || {};
   return [
     ['#sortiment', (c.products && c.products.title) || 'Sortiment'],
+    hasDelivery(c) ? ['#rozvoz', 'Rozvoz'] : null,
     ['#o-nas', (c.about && c.about.title) || 'O nás'],
     (Array.isArray(g.items) && g.items.length) ? ['#fotogalerie', g.title || 'Fotogalerie'] : null,
     ['#oteviraci-doba', (c.visit && c.visit.hoursTitle) || 'Otevírací doba'],
@@ -392,6 +396,25 @@ const regions = {
   <ol class="products" aria-labelledby="sortiment-title">
   ${cards}
   </ol>
+</div>`;
+  },
+
+  delivery(c) {
+    if (!hasDelivery(c)) return '';
+    const d = c.delivery;
+    const terms = (Array.isArray(d.terms) ? d.terms : [])
+      .filter((t) => t && t.label && t.value)
+      .map((t) => `<div class="delivery__term"><dt>${esc(t.label)}</dt><dd>${esc(t.value)}</dd></div>`).join('');
+    return `<div class="container">
+  <article class="card delivery__card" aria-labelledby="rozvoz-title" data-reveal>
+    <div class="delivery__intro">
+      <p class="eyebrow">${ICON.truck}${esc(d.title)}</p>
+      <h2 id="rozvoz-title" class="card__title">${esc(d.lead || d.title)}</h2>
+      ${d.text ? `<p class="delivery__text">${esc(d.text)}</p>` : ''}
+      ${d.cta ? `<a class="btn btn--primary" href="${telHref(c.company.phone)}">${ICON.phone}${esc(d.cta)}</a>` : ''}
+    </div>
+    ${terms ? `<dl class="delivery__terms">${terms}</dl>` : ''}
+  </article>
 </div>`;
   },
 
