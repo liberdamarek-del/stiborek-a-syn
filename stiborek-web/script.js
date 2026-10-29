@@ -628,6 +628,8 @@ export function jsonLd(c) {
   if (co.geo && co.geo.lat && co.geo.lng) data.geo = { '@type': 'GeoCoordinates', latitude: co.geo.lat, longitude: co.geo.lng };
   if (co.maps && co.maps.mapyCz) data.hasMap = co.maps.mapyCz;
   if (co.email) data.email = co.email;
+  if (Array.isArray(co.awards) && co.awards.length) data.award = co.awards.map(String);
+  if (Array.isArray(co.areaServed) && co.areaServed.length) data.areaServed = co.areaServed.map((name) => ({ '@type': 'City', name: String(name) }));
   if (special.length) data.specialOpeningHoursSpecification = special;
   return JSON.stringify(data, null, 2).replace(/</g, '\\u003c');
 }
