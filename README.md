@@ -40,6 +40,9 @@ node tools/build.mjs          # content.json → index.html, 404.html, sitemap.x
 node tools/serve.mjs 8080     # náhled s produkčními bezpečnostními hlavičkami
 npm test                      # HTML, a11y (axe), CSP, SEO, výkon, logika otevírací doby, galerie
 
+# úprava fotek z Facebooku (pip install opencv-python numpy) → pak tools/optimize-images.py
+python3 tools/edit-photos.py docs/source-assets/fotky/facebook-originaly docs/source-assets/fotky/upravene
+
 # kopie pro GitHub Pages a její kontrola (pip install playwright && python3 -m playwright install chromium)
 node tools/build.mjs --out _site --site-url https://liberdamarek-del.github.io/stiborek-a-syn/
 python3 tools/test-pages.py _site https://liberdamarek-del.github.io/stiborek-a-syn/

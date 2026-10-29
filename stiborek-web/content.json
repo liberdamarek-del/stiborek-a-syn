@@ -7,7 +7,7 @@
     "url": "https://www.reznictvistiborek.cz/",
     "title": "Řeznictví Stiborek a syn – Frenštát pod Radhoštěm",
     "description": "Řeznictví a uzenářství Stiborek a syn na ulici Horní 210 ve Frenštátě pod Radhoštěm. Maso, uzeniny a masné výrobky. Otevírací doba, kontakt a cesta k nám.",
-    "ogImage": "images/brand/og-image.jpg",
+    "ogImage": "images/brand/og-foto.jpg",
     "lastUpdated": "2026-10-29"
   },
 
@@ -70,8 +70,9 @@
     "subtitle": "Maso, uzeniny a masné výrobky podle původních rodinných receptur. Najdete nás na ulici Horní ve Frenštátě pod Radhoštěm.",
     "primaryCta": { "label": "Prohlédnout sortiment", "href": "#sortiment" },
     "secondaryCta": { "label": "Jak se k nám dostat", "href": "#kde-nas-najdete" },
-    "_image_napoveda": "Velká fotografie v úvodu. Zatím není k dispozici – doplňte např. { \"src\": \"images/hero/prodejna.jpg\", \"alt\": \"Popis fotografie\", \"width\": 1920, \"height\": 1280 }. Bez fotografie se zobrazí logo.",
-    "image": null
+    "_image_napoveda": "Velká fotografie v úvodu, např. { \"src\": \"images/hero/prodejna.jpg\", \"alt\": \"Popis fotografie\", \"width\": 1920, \"height\": 1280 }. Bez fotografie (null) se zobrazí logo.",
+    "_image_stav": "Fotografie ze stránky firmy na Facebooku (dodala rodina majitele 29. 10. 2026), upraveno nástrojem tools/edit-photos.py",
+    "image": { "src": "images/hero/hero-klobasy.jpg", "alt": "Uzené klobásy na tácu u pultu prodejny", "width": 1015, "height": 1445, "widths": [640, 1015], "formats": ["avif", "webp"] }
   },
 
   "intro": {
@@ -97,29 +98,29 @@
       },
       {
         "name": "Klobásky a debrecínky",
-        "description": "Podle původní rodinné receptury. S klobáskami jsme soutěžili i na Masopustu ve Valašském muzeu v přírodě.",
-        "image": null,
+        "description": "Podle původní rodinné receptury. V soutěži o nejlepší klobásku na Masopustu ve Valašském muzeu v přírodě skončily v roce 2015 na 2. místě.",
+        "image": { "src": "images/products/klobasy-detail.jpg", "alt": "Detail uzených klobás", "width": 1015, "height": 761, "widths": [640, 1015], "formats": ["avif", "webp"] },
         "show": true,
         "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
       },
       {
-        "name": "Salám",
+        "name": "Frenštátský salám",
         "description": "Salám z naší výroby, který si oblíbili naši zákazníci.",
-        "image": null,
+        "image": { "src": "images/products/frenstatsky-salam.jpg", "alt": "Frenštátské salámy se značkou Miroslav Stiborek na roštu", "width": 772, "height": 579, "widths": [640, 772], "formats": ["avif", "webp"] },
         "show": true,
         "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
       },
       {
         "name": "Uzené maso z udírny",
         "description": "Udíme sami, podle rodinné receptury.",
-        "image": null,
+        "image": { "src": "images/products/uzene-maso.jpg", "alt": "Nakrojené uzené maso", "width": 1029, "height": 772, "widths": [640, 1029], "formats": ["avif", "webp"] },
         "show": true,
         "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
       },
       {
         "name": "Tlačenka, jitrnice a jelita",
-        "description": "Zabijačkové speciality z naší výroby.",
-        "image": null,
+        "description": "Zabijačkové speciality z naší výroby. Naše tlačenka vyhrála v roce 2018 soutěž o nejlepší valašskou tlačenku.",
+        "image": { "src": "images/products/jitrnice.jpg", "alt": "Jitrnice na tácu", "width": 767, "height": 575, "widths": [640, 767], "formats": ["avif", "webp"] },
         "show": true,
         "_stav": "OWNER-PROVIDED – rodina majitele, 29. 10. 2026"
       },
@@ -184,21 +185,30 @@
       "Řeznictví Stiborek a syn najdete ve Frenštátě pod Radhoštěm na ulici Horní 210."
     ],
     "_story_napoveda": "Příběh firmy – každý odstavec v uvozovkách, oddělené čárkou. Prázdné = nezobrazí se. Uvádějte jen ověřitelné údaje.",
-    "_story_stav": "Rok 1993 a prodejnu Pramen si majitel na webu nepřeje (29. 10. 2026). 3. generace, rodinné receptury, výrobky a účast na Masopustu: OWNER-PROVIDED – rodina majitele, 29. 10. 2026. 2. místo v 18. ročníku soutěže o nejlepší klobásku (Masopust ve Valašském muzeu v přírodě, 7. 2. 2015): VERIFIED – Valašský deník, 11. 2. 2015. Jiná umístění se online nepodařilo dohledat (výsledky 2011 a 2017 Stiborka neuvádějí, u ostatních ročníků výsledky online nejsou). Doplnit po potvrzení roku a pořadí (diplom).",
+    "_story_stav": "Rok 1993 a prodejnu Pramen si majitel na webu nepřeje (29. 10. 2026). 3. generace, rodinné receptury, výrobky a účast na Masopustu: OWNER-PROVIDED – rodina majitele, 29. 10. 2026. 2. místo v 18. ročníku soutěže o nejlepší klobásku (Masopust ve Valašském muzeu v přírodě, 7. 2. 2015): VERIFIED – Valašský deník, 11. 2. 2015. Jiná umístění se online nepodařilo dohledat (výsledky 2011 a 2017 Stiborka neuvádějí, u ostatních ročníků výsledky online nejsou). Doplnit po potvrzení roku a pořadí (diplom). 1. místo v XI. ročníku soutěže O nejlepší valašskou tlačenku (3. 2. 2018): VERIFIED – fotografie diplomu (Valašské muzeum v přírodě, 3. 2. 2018) ze stránky firmy na Facebooku, dodala rodina majitele 29. 10. 2026.",
     "story": [
       "Jsme rodinná firma – dnes v řeznictví pracuje už třetí generace rodiny Stiborků.",
       "Klobásky, debrecínky, salám, tlačenku, jitrnice, jelita, sekanou i uzené maso z naší udírny děláme podle původních rodinných receptur.",
-      "Několikrát jsme se zúčastnili tradičního Masopustu ve Valašském muzeu v přírodě v Rožnově pod Radhoštěm a soutěže řezníků o nejlepší klobásku. V jejím 18. ročníku v roce 2015 skončila naše klobáska na 2. místě."
+      "Několikrát jsme se zúčastnili tradičního Masopustu ve Valašském muzeu v přírodě v Rožnově pod Radhoštěm a soutěží řezníků, které se tam konají. V roce 2018 jsme s tlačenkou vyhráli 1. místo v soutěži O nejlepší valašskou tlačenku a v roce 2015 skončila naše klobáska na 2. místě v soutěži o nejlepší klobásku."
     ],
-    "image": null
+    "_image_stav": "Fotografie ze stránky firmy na Facebooku (dodala rodina majitele 29. 10. 2026), upraveno nástrojem tools/edit-photos.py",
+    "image": { "src": "images/about/prodejna-stanek.jpg", "alt": "Stánek s nápisem Řeznictví uzenářství Miroslav Stiborek a syn, plný uzenin a klobás", "width": 990, "height": 798, "widths": [640, 990], "formats": ["avif", "webp"] }
   },
 
   "gallery": {
     "title": "Fotogalerie",
-    "lead": "Z naší prodejny",
+    "lead": "Z naší výroby a prodejny",
     "_napoveda": "Fotografie galerie. Každá položka: { \"src\": \"images/gallery/nazev.jpg\", \"alt\": \"Co je na fotografii\", \"width\": 1600, \"height\": 1067, \"caption\": \"Nepovinný popisek\" }. Dokud je seznam prázdný, zobrazí se odkaz na Facebook.",
     "emptyText": "Fotografie a novinky sledujte na naší facebookové stránce.",
-    "items": []
+    "_items_stav": "Fotografie ze stránky firmy na Facebooku (dodala rodina majitele 29. 10. 2026), upraveno nástrojem tools/edit-photos.py; diplom: VERIFIED – fotografie diplomu (Valašské muzeum v přírodě, 3. 2. 2018) ze stránky firmy na Facebooku, dodala rodina majitele 29. 10. 2026",
+    "items": [
+      { "src": "images/gallery/udirna-klobasy.jpg", "alt": "Klobásy zavěšené na udírenských tyčích", "width": 1018, "height": 1520, "widths": [640, 1018], "formats": ["avif", "webp"], "caption": "Klobásy na udírenských tyčích" },
+      { "src": "images/gallery/frenstatske-salamy.jpg", "alt": "Frenštátské salámy s etiketou Miroslav Stiborek – řeznictví, uzenářství", "width": 1015, "height": 1360, "widths": [640, 1015], "formats": ["avif", "webp"], "caption": "Frenštátský salám" },
+      { "src": "images/gallery/jitrnice-klobasy.jpg", "alt": "Jitrnice, klobásy a další speciality na pultu", "width": 1015, "height": 788, "widths": [640, 1015], "formats": ["avif", "webp"], "caption": "Jitrnice a klobásy" },
+      { "src": "images/gallery/uzene-kusy.jpg", "alt": "Kusy uzeného masa na tácu", "width": 1020, "height": 565, "widths": [640, 1020], "formats": ["avif", "webp"], "caption": "Uzené maso" },
+      { "src": "images/gallery/udirna-vozik.jpg", "alt": "Řady klobás zavěšené na udírenském vozíku", "width": 1018, "height": 1580, "widths": [640, 1018], "formats": ["avif", "webp"], "caption": "Klobásy na udírenském vozíku" },
+      { "src": "images/gallery/diplom-tlacenka-2018.jpg", "alt": "Diplom Valašského muzea v přírodě pro Řeznictví a uzenářství Stiborek a syn za 1. místo v XI. ročníku soutěže O nejlepší valašskou tlačenku, Rožnov pod Radhoštěm, 3. února 2018", "width": 1104, "height": 803, "widths": [640, 1104], "formats": ["avif", "webp"], "caption": "1. místo – O nejlepší valašskou tlačenku, 2018" }
+    ]
   },
 
   "visit": {
